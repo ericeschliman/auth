@@ -11,6 +11,10 @@
 
   <body>
     <p>
+      <% @current_user = User.find_by{"id" => session["user_id"]} %>
+      Hey, <%= @current_user["first_name"] %>
+      <a href="/sessions/new">Login</a>
+
       <a href="/users/new">Sign Up</a>
     </p>
 
